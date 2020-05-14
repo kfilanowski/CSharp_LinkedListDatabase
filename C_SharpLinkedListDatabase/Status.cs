@@ -5,6 +5,7 @@ namespace C_SharpLinkedListDatabase
     /// This class models the marital status of a person. Marital statuses
     /// include: Married, Widowed, Divorced, and Single
     /// </summary>
+    /// 
     /// Author: Kevin Filanowski
     /// Version: 05/13/2020
     public class Status
@@ -17,12 +18,9 @@ namespace C_SharpLinkedListDatabase
         /// <summary>
         /// Property defining set and getting methods for the martial status.
         /// </summary>
-        private string MaritalStatus
+        public string MaritalStatus
         {
-            get
-            {
-                return _maritalStatus;
-            }
+            get => _maritalStatus;
             set
             {
                 // Assign the full marital status word.
@@ -57,10 +55,7 @@ namespace C_SharpLinkedListDatabase
         /// Constructor to set the marital status of the person.
         /// </summary>
         /// <param name="maritalStatus"></param>
-        public Status(string maritalStatus)
-        {
-            _maritalStatus = maritalStatus;
-        }
+        public Status(string maritalStatus) => _maritalStatus = maritalStatus;
 
         /// <summary>
         /// Compares two Status objects by their marital status. If the marital
@@ -70,25 +65,14 @@ namespace C_SharpLinkedListDatabase
         /// <returns>True if the two objects are equal, false if they are not.</returns>
         public override bool Equals(object obj)
         {
-            // Check if obj is a Status object, then cast and compare it.
-            if (obj is Status o)
-            {
-                // If the fields are the same, then they are equal.
-                if (o.MaritalStatus.Equals(MaritalStatus))
-                {
-                    return true;
-                }
-            }
-            return false;
+            return obj is Status status &&
+                string.Equals(MaritalStatus, status.MaritalStatus, StringComparison.OrdinalIgnoreCase);
         }
 
         /// <summary>
         /// Returns the marital status of the associated Status object.
         /// </summary>
         /// <returns>The marital status of the person.</returns>
-        public override string ToString()
-        {
-            return MaritalStatus;
-        }
+        public override string ToString() => MaritalStatus;
     }
 }

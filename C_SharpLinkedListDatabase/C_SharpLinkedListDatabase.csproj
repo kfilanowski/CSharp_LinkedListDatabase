@@ -27,13 +27,17 @@
   <ItemGroup>
     <None Include="admin.txt" />
     <None Include="faculty.txt" />
-    <None Include="README.md" />
     <None Include="tadmin.txt" />
     <None Include="tfaculty.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAttribute.cs" />
     <Compile Include="Status.cs" />
+    <Compile Include="README.md" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="Table.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,6 +4,7 @@ namespace C_SharpLinkedListDatabase
     /// <summary>
     /// Interface class defines attribute related operations.
     /// </summary>
+    /// 
     /// Author: Kevin Filanowski
     /// Version: 05/13/2020
     public interface IAttribute
@@ -31,6 +32,6 @@ namespace C_SharpLinkedListDatabase
         /// a copy constructor.
         /// </summary>
         /// <returns>A deep copy of the current employee object.</returns>
-        public IAttribute makeCopy();
+        public IAttribute MakeCopy();
     }
 }
