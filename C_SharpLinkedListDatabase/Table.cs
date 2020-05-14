@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 namespace C_SharpLinkedListDatabase
 {
     /// <summary>
@@ -248,7 +249,7 @@ namespace C_SharpLinkedListDatabase
         /// </summary>
         /// <param name="table">The other table to compare with.</param>
         /// <returns>A new table containing nodes that are contained in both tables.</returns>
-        Table<T> Union(Table<T> table)
+        public Table<T> Union(Table<T> table)
         {
             // The new table consisting of elements of both tables.
             Table<T> unionTable = new Table<T>(Title + ", " + table.Title);
@@ -297,7 +298,7 @@ namespace C_SharpLinkedListDatabase
         public override string ToString()
         {
             // Creating a string buffer to concatenate strings to.
-            StringBuffer text = new StringBuffer();
+            StringBuilder text = new StringBuilder();
 
             // Reset the temporary node back to the head to iterate the table.
             temp = Head;

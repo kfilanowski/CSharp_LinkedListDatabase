@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace C_SharpLinkedListDatabase
 {
@@ -66,6 +65,15 @@ namespace C_SharpLinkedListDatabase
                    First == person.First &&
                    Last == person.Last &&
                    EqualityComparer<Status>.Default.Equals(Status, person.Status);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return First + ", " + Last + ": " + Status;
         }
     }
 }

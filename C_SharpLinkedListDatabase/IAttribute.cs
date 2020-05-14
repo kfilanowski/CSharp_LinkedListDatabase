@@ -1,5 +1,4 @@
-﻿using System;
-namespace C_SharpLinkedListDatabase
+﻿namespace C_SharpLinkedListDatabase
 {
     /// <summary>
     /// Interface class defines attribute related operations.

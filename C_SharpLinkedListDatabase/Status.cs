@@ -55,7 +55,7 @@ namespace C_SharpLinkedListDatabase
         /// Constructor to set the marital status of the person.
         /// </summary>
         /// <param name="maritalStatus"></param>
-        public Status(string maritalStatus) => _maritalStatus = maritalStatus;
+        public Status(string maritalStatus) => MaritalStatus = maritalStatus;
 
         /// <summary>
         /// Compares two Status objects by their marital status. If the marital
